@@ -1,0 +1,3 @@
+# Crawlers need to read the noindex directives in each HTML page.
+User-agent: *
+Allow: /

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="AB geometric monogram">
+  <rect width="64" height="64" rx="14" fill="#292f38"/>
+  <path d="M32 13v38" stroke="#b8916d" stroke-width="1.5"/>
+  <text x="7" y="44" fill="#f8f6f1" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">A</text>
+  <text x="35" y="44" fill="#f8f6f1" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">B</text>
+  <path d="M13 51h11m16 0h11" stroke="#b8916d" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

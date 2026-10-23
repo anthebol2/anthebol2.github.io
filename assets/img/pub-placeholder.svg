@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 320 200" role="img" aria-label="Paper figure placeholder">
+  <rect width="320" height="200" fill="#f6eef0"/>
+  <rect x="116" y="66" width="88" height="66" rx="8" fill="none" stroke="#cf9aa8" stroke-width="3"/>
+  <circle cx="140" cy="90" r="8" fill="#cf9aa8"/>
+  <path d="M120 130 L150 102 L168 118 L188 94 L200 130 Z" fill="#cf9aa8"/>
+  <text x="160" y="162" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#9a3a52">Figure</text>
+</svg>

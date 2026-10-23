@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Stealth startup</title>
+  <desc id="desc">An original navy geometric cube, with three separated facets suggesting a discreet robotics project.</desc>
+  <path d="M64 12 109 38 64 64 19 38Z" fill="#203958"/>
+  <path d="m19 47 40 23v46L19 93Z" fill="#36587c"/>
+  <path d="m69 70 40-23v46l-40 23Z" fill="#152b46"/>
+  <path d="m31 66 16 9v7l-16-9Zm50 9 16-9v7l-16 9Z" fill="#eef3f8"/>
+</svg>

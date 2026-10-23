@@ -1,0 +1,16 @@
+/* Consistent drawn symbols keep alignment independent of font glyph metrics. */
+.author-credit { display:inline-flex; align-items:center; white-space:nowrap; gap:2px; color:var(--ink,#292d33); font-weight:500; }
+.author-credit a { color:inherit; }
+.author-marker { display:inline-flex; align-items:center; justify-content:center; width:19px; height:24px; flex:none; margin:0 0 0 2px; color:var(--ink,#292d33); vertical-align:middle; }
+.author-marker svg { display:block; width:17px; height:20px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.author-credit .author-marker { transform:translateY(-4px); }
+.author-row { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:8px 22px; }
+.author-row + .author-row { margin-top:10px; }
+.pub__authors { text-align:center; font-size:21px; line-height:1.7; margin:0 0 12px; }
+.pub__authors .author-self { color:color-mix(in srgb,var(--person-link,#315f99) 85%,var(--ink,#292d33)); font-weight:700; font-size:1.035em; text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; background:linear-gradient(transparent 58%,color-mix(in srgb,var(--person-link,#315f99) 12%,transparent) 58%); }
+.author-legend { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; width:100%; gap:8px 24px; margin:0 0 26px; padding:0; border:0; color:var(--muted,#65707b); font:400 16px/1.5 var(--ui-font,Arial,sans-serif); }
+.author-legend > span { display:inline-flex; align-items:center; gap:9px; }
+.author-legend .author-marker { width:22px; height:28px; margin:0; padding:0; transform:none; border-radius:0; background:transparent; }
+.author-legend .author-marker svg { width:19px; height:22px; }
+@media(max-width:760px) { .pub__authors { font-size:19px; } .author-row { gap:8px 14px; } .author-legend { font-size:15px; gap:10px 18px; } }
+.pub__title { text-align:center; }

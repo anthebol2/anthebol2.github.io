@@ -1,0 +1,86 @@
+/* Five quiet, always-visible credits for the landscape photograph. */
+.lake-credit { display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px; width:fit-content; max-width:100%; margin:0; color:#2e3a42; font:400 14px/1.6 var(--ui-font,'DM Sans',Arial,sans-serif); }
+.lake-credit__place { font-weight:500; }
+.lake-credit__medium { font-size:.9em; }
+.lake-credit__medium::before { content:'·'; margin-right:10px; }
+.hero > .lake-credit { grid-column:1/-1; justify-self:end; margin-top:-8px; }
+[data-photo-note="corner"] .lake-credit { text-shadow:0 1px 8px rgba(255,255,255,.85); }
+[data-photo-note="margin"] .lake-credit { justify-self:start; display:block; padding:2px 0 2px 14px; border-left:1px solid currentColor; }
+[data-photo-note="margin"] .lake-credit__place,[data-photo-note="margin"] .lake-credit__medium { display:block; }
+[data-photo-note="margin"] .lake-credit__medium::before { content:none; }
+[data-photo-note="film"] .lake-credit { padding:9px 16px 9px 22px; border-radius:2px; background:rgba(247,242,231,.94); box-shadow:0 2px 10px rgba(27,43,58,.06); }
+[data-photo-note="film"] .lake-credit::before { content:''; position:absolute; inset:7px auto 7px 8px; width:4px; background:repeating-linear-gradient(to bottom,#b6afa0 0 3px,transparent 3px 8px); }
+[data-photo-note="rule"] .lake-credit { width:100%; gap:6px 12px; font-size:13px; }
+[data-photo-note="rule"] .lake-credit::before { content:''; flex:1; min-width:24px; height:1px; background:rgba(46,58,66,.3); margin-right:8px; }
+:root[data-photo-note="vertical"] .hero > .lake-credit { position:absolute; grid-area:auto; justify-self:auto; right:22px; bottom:190px; writing-mode:vertical-rl; margin:0; font-size:12px; letter-spacing:.025em; }
+[data-theme="dark"] .hero > .lake-credit { color:#e3e8eb; }
+[data-theme="dark"][data-photo-note="corner"] .lake-credit { text-shadow:0 1px 8px rgba(10,19,31,.8); }
+[data-theme="dark"][data-photo-note="film"] .lake-credit { color:#303a40; }
+[data-theme="dark"][data-photo-note="rule"] .lake-credit::before { background:rgba(227,232,235,.35); }
+@media(max-width:900px) {
+  :root[data-photo-note="vertical"] .hero > .lake-credit { position:relative; grid-column:1/-1; justify-self:end; right:auto; bottom:auto; writing-mode:horizontal-tb; margin-top:-8px; font-size:13px; }
+}
+@media(max-width:760px) {
+  .hero > .lake-credit { justify-self:center; font-size:13px; gap:4px 8px; }
+  :root[data-photo-note="margin"] .hero > .lake-credit { justify-self:start; }
+  [data-photo-note="rule"] .hero > .lake-credit { font-size:12px; }
+  .hero .lake-credit__medium::before { margin-right:8px; }
+}
+
+/* A small camera in the corner opens a keepsake from the film roll. */
+.hero.hero--photo-note { padding-top:74px; }
+.hero > .photo-memento { position:absolute; grid-area:auto; justify-self:auto; top:14px; right:24px; z-index:5; }
+.photo-memento__trigger { display:inline-flex; align-items:center; gap:9px; min-height:44px; padding:5px 13px 5px 9px; border:1px solid rgba(255,255,255,.82); border-radius:28px; color:#33464f; background:rgba(249,250,247,.72); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); box-shadow:0 3px 14px #263a4610,inset 0 1px 0 #ffffffb3; cursor:pointer; font:500 13px/1.4 var(--ui-font,Arial,sans-serif); transition:transform .25s,background .25s,box-shadow .25s; }
+.photo-camera { width:33px; height:27px; fill:none; stroke:currentColor; stroke-width:1.5; stroke-linejoin:round; stroke-linecap:round; overflow:visible; transition:transform .25s; }
+.photo-camera__body { fill:rgba(239,233,219,.65); }
+.photo-camera__glass { fill:#809caa; stroke:#5d7b8a; }
+.photo-camera__shine { stroke:#ffffffc9; stroke-width:1.1; }
+.photo-camera__light { fill:#bb8962; stroke:none; }
+.photo-memento__dot { width:4px; height:4px; border-radius:50%; background:#b78967; }
+.photo-memento__trigger:hover { transform:translateY(-2px); background:rgba(255,255,252,.94); box-shadow:0 6px 18px #263a4620; }
+.photo-memento__trigger:hover .photo-camera { transform:rotate(-7deg); }
+.photo-memento.is-open .photo-memento__trigger { background:#f8f7f1; border-color:#b9c7cb; }
+.photo-memento.is-open .photo-camera__glass { animation:camera-shutter .45s ease; }
+.photo-card { position:absolute; top:calc(100% + 12px); right:0; width:324px; max-width:calc(100vw - 32px); padding:16px 18px 19px; border:1px solid #ffffffe0; border-radius:19px; background:linear-gradient(145deg,#fffdf6f7,#f3f6f4f5); color:#2e3b44; box-shadow:0 18px 54px #192d3b2e,0 3px 10px #192d3b0d; -webkit-backdrop-filter:blur(22px); backdrop-filter:blur(22px); transform-origin:top right; }
+.photo-card[hidden] { display:none; }
+.photo-card:focus { outline:none; }
+.is-open .photo-card { animation:photo-card-in .24s cubic-bezier(.2,.8,.2,1) both; }
+.photo-card__top { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:11px; }
+.photo-card__top > span { color:#7b7567; font:500 11px/1.5 var(--ui-font,Arial,sans-serif); letter-spacing:.11em; text-transform:uppercase; }
+.photo-card__close { display:grid; place-items:center; width:30px; height:30px; padding:5px; border:0; border-radius:50%; background:#e6e9e699; color:#52616a; cursor:pointer; transition:background .2s,transform .2s; }
+.photo-card__close svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.5; stroke-linecap:round; }
+.photo-card__close:hover { background:#d9e1df; transform:rotate(90deg); }
+.photo-card__frame { position:relative; padding:8px 0; background:#38424a; border-radius:4px; overflow:hidden; }
+.photo-card__frame::before,.photo-card__frame::after { content:''; position:absolute; left:8px; right:8px; height:3px; background:repeating-linear-gradient(to right,#eee9da 0 5px,transparent 5px 12px); opacity:.7; }
+.photo-card__frame::before { top:2px; }
+.photo-card__frame::after { bottom:2px; }
+.photo-card__frame img { display:block; width:100%; height:128px; object-fit:cover; object-position:center 60%; }
+.photo-card h2 { margin:19px 0 3px; color:inherit; font:500 29px/1.15 'Newsreader',Georgia,serif; letter-spacing:-.025em; }
+.photo-card__location { display:flex; align-items:center; gap:5px; margin:0; color:#60727b; font:400 14px/1.5 var(--ui-font,Arial,sans-serif); }
+.photo-card__location svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:1.4; }
+.photo-card__details { display:grid; grid-template-columns:1fr 1fr; gap:15px; padding-top:16px; margin:18px 0 0; border-top:1px solid #34424b20; font:400 14px/1.5 var(--ui-font,Arial,sans-serif); }
+.photo-card__details dt { color:#7d8587; font-size:11px; margin-bottom:3px; letter-spacing:.05em; }
+.photo-card__details dd { color:#33464f; font-weight:500; margin:0; }
+.photo-memento button:focus-visible { outline:2px solid #577f98; outline-offset:4px; }
+[data-theme="dark"] .photo-memento__trigger { color:#e6eced; background:#22343fc4; border-color:#ffffff33; }
+[data-theme="dark"] .photo-memento__trigger:hover,[data-theme="dark"] .photo-memento.is-open .photo-memento__trigger { background:#32444ee8; }
+[data-theme="dark"] .photo-camera__body { fill:#52666d; }
+[data-theme="dark"] .photo-card { background:linear-gradient(145deg,#29353df7,#263139f7); border-color:#ffffff30; color:#edf0ee; box-shadow:0 18px 54px #00000055; }
+[data-theme="dark"] .photo-card__top > span { color:#c4b9a5; }
+[data-theme="dark"] .photo-card__location,[data-theme="dark"] .photo-card__details dt { color:#b2c1c7; }
+[data-theme="dark"] .photo-card__details dd { color:#eef0eb; }
+[data-theme="dark"] .photo-card__details { border-color:#ffffff26; }
+[data-theme="dark"] .photo-card__close { background:#ffffff13; color:#d4e0e2; }
+[data-theme="dark"] .photo-card__close:hover { background:#ffffff25; }
+@keyframes photo-card-in { from { opacity:0; transform:translateY(-6px) scale(.95); } to { opacity:1; transform:none; } }
+@keyframes camera-shutter { 0%,100% { fill:#809caa; } 35% { fill:#fff8db; } 65% { fill:#33464f; } }
+@media(max-width:760px) {
+  .hero.hero--photo-note { padding-top:70px; }
+  .hero > .photo-memento { top:12px; right:16px; }
+  .photo-card { width:310px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .photo-memento *, .photo-memento *::before, .photo-memento *::after { animation:none!important; transition:none!important; }
+  .photo-memento__trigger:hover,.photo-memento__trigger:hover .photo-camera,.photo-card__close:hover { transform:none; }
+}
+@media print { .photo-memento { display:none; } .hero.hero--photo-note { padding-top:0; } }

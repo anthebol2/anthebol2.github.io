@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Anthony Bolton circular loop monogram">
+  <circle cx="32" cy="32" r="30" fill="#f4efe5" stroke="#353a40" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="25.5" fill="none" stroke="#bba68b" stroke-width=".7"/>
+  <g transform="translate(5.35 7.25) scale(.82)" fill="none" stroke="#282e36" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 26v20M28 36a9 9 0 1 0-18 0 9 9 0 0 0 18 0M37 15v30M37 36a9 9 0 1 1 18 0 9 9 0 0 1-18 0"/>
+  </g>
+</svg>
