@@ -134,7 +134,7 @@
   .appearance__panel { position:fixed; top:76px; right:16px; width:300px; max-width:calc(100vw - 32px); }
 }
 @media screen and (max-width:430px) {
-  .nav__brand > span:last-child { max-width:84px; font-size:15px; line-height:1.15; }
+  .nav__brand > span:last-child { max-width:none; font-size:17px; line-height:1.15; }
   .nav__right { gap:4px; }
 }
 @media screen and (min-width:761px) and (max-width:1100px) {

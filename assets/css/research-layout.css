@@ -1,13 +1,13 @@
 /* Retain the original full-figure layout with larger, clearer author names. */
 .research-page { --paper-detail-size:26px; }
-.research-page #publications .pub__authors { font-size:var(--paper-detail-size); line-height:1.6; }
+.research-page #publications .pub__authors { font-size:calc(var(--paper-detail-size) - 2px); line-height:1.6; }
 .research-page #publications .pub__authors .author-self { font-size:1em; font-weight:700; }
 .research-page .pub__desc { margin:0 0 22px; color:var(--ink-soft); font-size:18px; line-height:1.65; text-align:justify; text-align-last:left; text-wrap:wrap; hyphens:auto; }
 .research-page .pub__venue { display:grid; grid-template-columns:minmax(0,1fr) max-content; align-items:center; gap:10px 14px; margin-inline:-12px; width:calc(100% + 24px); font-size:var(--paper-detail-size); }
 .research-page .pub__venue .conference-name { min-width:0; }
 .research-page .pub__venue .oral-highlights { justify-self:end; white-space:nowrap; }
 .research-page .pub__venue :is(.conference-name,.oral-badge,.pub__badge) { font-size:inherit; }
-.research-page .pub__venue .publication-selection { display:block; grid-column:1/-1; width:100%; color:#b42332; font-size:inherit; font-weight:700; line-height:1.6; }
+.research-page .pub__venue .publication-selection { display:block; grid-column:1/-1; width:100%; color:#b42332; font-size:calc(var(--paper-detail-size) - 2px); font-weight:700; line-height:1.6; }
 [data-theme="dark"] .research-page .pub__venue .publication-selection { color:#ff9ba5; }
 @media screen and (min-width:1101px) {
   .research-page { --paper-detail-size:24px; }
