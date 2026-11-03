@@ -23,3 +23,16 @@
   max-width:none;
 }
 .research-page #publications .pub__authors:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+
+@media screen and (max-width:760px) {
+  .research-page #publications .pub__authors {
+    flex-wrap:wrap;
+    overflow:visible;
+    gap:5px 8px;
+  }
+  .research-page #publications .pub__authors .author-credit {
+    flex:0 1 auto;
+    flex-wrap:wrap;
+    max-width:100%;
+  }
+}
