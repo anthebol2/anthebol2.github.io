@@ -5,7 +5,7 @@
   function enhance() {
     var root = document.documentElement;
     var logoAssets = {
-      final: 'assets/img/site-mark.svg?v=5',
+      final: 'assets/img/orangutan.svg?v=2',
       editorial: 'assets/img/site-mark.svg?v=5',
       geometric: 'assets/img/site-mark-geometric.svg?v=1',
       orbit: 'assets/img/site-mark-orbit.svg?v=1',
@@ -135,7 +135,7 @@
       var summary = appearance.querySelector('summary');
       var accentButtons = appearance.querySelectorAll('[data-accent-choice]');
       var fontChoice = document.getElementById('fontChoice');
-      var accents = ['navy', 'burgundy', 'plum', 'charcoal'];
+      var accents = ['muted-navy', 'original-blue', 'slate-blue', 'steel-blue', 'denim', 'midnight'];
       var fonts = ['editorial', 'inter', 'source', 'georgia'];
 
       function validChoice(value, options) { return options.indexOf(value) !== -1; }
@@ -154,7 +154,7 @@
         } catch (error) {}
       }
       function setAccent(value) {
-        var accent = validChoice(value, accents) ? value : 'charcoal';
+        var accent = validChoice(value, accents) ? value : 'muted-navy';
         root.setAttribute('data-accent', accent);
         accentButtons.forEach(function (button) {
           button.setAttribute('aria-pressed', String(button.getAttribute('data-accent-choice') === accent));
@@ -182,7 +182,7 @@
         }
       } catch (error) {}
       setAccent(initialAccent);
-      setFont(initialFont);
+      if (fontChoice) setFont(initialFont);
 
       accentButtons.forEach(function (button) {
         button.addEventListener('click', function () {
@@ -203,7 +203,7 @@
       }
       window.addEventListener('storage', function (event) {
         if (event.key === 'site-accent' || event.key === null) setAccent(event.newValue);
-        if (event.key === 'site-font' || event.key === null) setFont(event.newValue);
+        if (fontChoice && (event.key === 'site-font' || event.key === null)) setFont(event.newValue);
       });
 
       closeAppearance = function (returnFocus) {

@@ -1,0 +1,18 @@
+/* Phone refinements leave the established desktop composition in place. */
+@media screen and (max-width:760px) {
+  .nav__brand > span:last-child { display:inline; font-size:17px; }
+  .nav__inner { gap:12px; }
+  .hero__portrait { width:min(48vw,180px); min-height:220px; }
+  .hero__copy .hero__hello { font-size:13px; margin-bottom:6px; }
+  .hero__copy #name,:root[data-about-style="glass"] .hero__copy #name { font-size:clamp(32px,9.5vw,44px); line-height:1.08; }
+  .hero > .contacts > a[href*="scholar.google"] { grid-column:1/-1; }
+  .pub__links { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+  .pub__links a,.pub__links .resource-pending { width:100%; justify-content:center; min-height:44px; }
+  .selection-note { padding:12px; }
+  .selection-note__rates { display:grid; gap:2px; }
+  .news-selection { padding:7px 10px; }
+  .news-selection__label { display:block; margin:0 0 2px; }
+}
+@media screen and (max-width:430px) {
+  .nav__monogram { display:none; }
+}

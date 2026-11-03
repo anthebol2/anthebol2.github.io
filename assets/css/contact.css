@@ -1,0 +1,122 @@
+/* Email choices remain independent of page layout and browser mail settings. */
+.email-dialog {
+  box-sizing: border-box;
+  width: min(480px, calc(100% - 32px));
+  max-width: none;
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 32px 28px 24px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--line, #dce0e6);
+  border-radius: 20px;
+  background: var(--surface, #fff);
+  color: var(--ink, #20242b);
+  box-shadow: 0 24px 80px #09132640;
+  font: 16px/1.55 var(--font, Georgia, serif);
+  text-align: left;
+}
+.email-dialog *, .email-dialog *::before, .email-dialog *::after { box-sizing: border-box; }
+.email-dialog::backdrop {
+  background: #101a2bb3;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.email-dialog__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink, #20242b);
+  font: 26px/1 var(--ui-font, sans-serif);
+  cursor: pointer;
+}
+.email-dialog__close:hover { background: var(--tint, #edf2f9); }
+.email-dialog__eyebrow {
+  margin: 0 32px 8px 0;
+  color: var(--accent, #244c88);
+  font: 700 12px/1.5 var(--ui-font, sans-serif);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.email-dialog__title {
+  margin: 0 20px 12px 0;
+  color: var(--ink, #20242b);
+  font: 700 30px/1.15 var(--heading-font, Georgia, serif);
+  letter-spacing: -.025em;
+}
+.email-dialog__intro {
+  margin: 0 0 20px;
+  color: var(--ink-soft, #2e343d);
+  font-size: 16px;
+  line-height: 1.55;
+}
+.email-dialog__address {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  margin: 0 0 10px;
+  padding: 12px;
+  border: 1px solid var(--line, #dce0e6);
+  border-radius: 9px;
+  background: var(--bg, #faf9f6);
+  color: var(--ink, #20242b);
+  font: 16px/1.4 var(--ui-font, sans-serif);
+  text-align: center;
+}
+.email-dialog__copy {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 14px;
+  border: 1px solid var(--accent, #244c88);
+  border-radius: 9px;
+  background: var(--accent, #244c88);
+  color: var(--surface, #fff);
+  font: 700 15px/1.5 var(--ui-font, sans-serif);
+  cursor: pointer;
+}
+.email-dialog__copy:hover { background: var(--accent-hover, #163766); border-color: var(--accent-hover, #163766); }
+.email-dialog__copy:disabled { cursor: progress; opacity: .7; }
+.email-dialog__options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: 16px;
+}
+.email-dialog__options a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 1px solid var(--line, #dce0e6);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--accent, #244c88);
+  font: 600 15px/1.5 var(--ui-font, sans-serif);
+  text-decoration: none;
+}
+.email-dialog__options a:hover { background: var(--tint, #edf2f9); border-color: var(--accent, #244c88); text-decoration: none; }
+.email-dialog :is(button, a, input):focus-visible {
+  outline: 3px solid var(--person-link, #285fba);
+  outline-offset: 3px;
+}
+.email-dialog__status {
+  min-height: 1.55em;
+  margin: 14px 0 0;
+  color: var(--ink-soft, #2e343d);
+  font: 14px/1.55 var(--ui-font, sans-serif);
+}
+@media (max-width: 420px) {
+  .email-dialog { padding: 28px 20px 20px; }
+  .email-dialog__title { font-size: 28px; }
+}

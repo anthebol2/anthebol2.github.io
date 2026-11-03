@@ -1,8 +1,8 @@
 /* Reserve space below the centered content for the lake to dissolve into the page. */
 :root .hero.hero--lake-fade {
-  --lake-content-space: clamp(96px, 10vw, 150px);
-  --lake-fade-depth: clamp(240px, 22vw, 340px);
-  min-height: calc(1060px + var(--lake-fade-depth));
+  --lake-content-space: clamp(72px, 7vw, 110px);
+  --lake-fade-depth: clamp(130px, 13vw, 190px);
+  min-height: calc(820px + var(--lake-fade-depth));
   padding-block: var(--lake-content-space) calc(var(--lake-content-space) + var(--lake-fade-depth));
   align-content: center;
   grid-template-rows: auto auto;
@@ -34,8 +34,8 @@
 
 @media (max-width: 760px) {
   :root .hero.hero--lake-fade {
-    --lake-content-space: 76px;
-    --lake-fade-depth: 195px;
+    --lake-content-space: 56px;
+    --lake-fade-depth: 100px;
     min-height: 0;
   }
 }

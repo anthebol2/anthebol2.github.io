@@ -1,0 +1,180 @@
+/* A personal masthead with one clear name and a separate research focus. */
+.hero__copy #name,
+:root[data-about-style="glass"] .hero__copy #name {
+  margin:0 0 14px;
+  font-size:clamp(40px,4.6vw,62px);
+  font-weight:600;
+  line-height:1.06;
+  letter-spacing:-.045em;
+  color:var(--ink);
+}
+.hero__copy .prose .hero__opening { color:var(--ink); font-weight:400; }
+/* Selection rates follow Oral directly, without a separate panel. */
+.news-list .oral-rates,.pub__venue .oral-rates {
+  color:#b42332;
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:700;
+  line-height:1.6;
+  white-space:normal;
+}
+.pub__venue .oral-highlights { display:inline; }
+[data-theme="dark"] .news-list .oral-rates,
+[data-theme="dark"] .pub__venue .oral-rates { color:#ff9ba5; }
+/* Hover highlights the badges while the surrounding cards retain their colors. */
+.research-page .pub:is(:hover,:focus-within) { background:var(--surface); border-color:var(--line); box-shadow:0 3px 12px #20242b04; }
+.news-list li:is(:hover,:focus-within) { background:transparent; }
+:root[data-theme="dark"] .nav__monogram { background:transparent; }
+@media screen and (max-width:760px) {
+  .hero__copy #name,:root[data-about-style="glass"] .hero__copy #name { font-size:clamp(32px,9vw,44px); margin-bottom:12px; }
+  .nav__monogram { display:grid; width:28px; height:28px; flex:none; }
+  .nav__brand { gap:7px; }
+}
+
+/* Oral and its percentage share the same typography in news and publications. */
+.news-list a.news-oral,
+.pub__venue a.oral-badge {
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:700;
+  line-height:1.6;
+}
+
+/* Awards uses the shared section heading; research destinations are easy to scan. */
+#awards .section-heading h2 { margin-bottom:0; }
+.research-contents { gap:12px; }
+.research-contents a {
+  min-height:48px;
+  padding:10px 18px;
+  border:1px solid color-mix(in srgb,var(--accent) 28%,var(--line));
+  border-radius:8px;
+  background:var(--surface);
+  color:var(--accent);
+  font-size:18px;
+  font-weight:700;
+  line-height:1.4;
+}
+.research-contents a:hover,.research-contents a:focus-visible {
+  background:var(--tint);
+  border-color:var(--accent);
+  border-radius:8px;
+  color:var(--accent);
+  text-decoration:none;
+}
+.research-page .research-group > .research-subtitle,
+.research-page #main > #service > .research-subtitle {
+  align-items:center;
+  font-size:36px;
+  font-weight:700;
+  line-height:1.2;
+  border-bottom:2px solid var(--line);
+  padding-bottom:16px;
+  gap:16px;
+}
+.research-page .research-group > .research-subtitle::before,
+.research-page #main > #service > .research-subtitle::before {
+  content:'';
+  width:4px;
+  height:28px;
+  border-radius:3px;
+  background:var(--accent);
+  flex:none;
+}
+.research-page .research-subtitle { scroll-margin-top:100px; }
+@media screen and (max-width:760px) {
+  .research-contents { gap:8px; }
+  .research-contents a { font-size:16px; padding:10px 14px; }
+  .research-page .research-group > .research-subtitle,
+  .research-page #main > #service > .research-subtitle { font-size:28px; gap:12px; flex-wrap:wrap; }
+  .research-section-count { font-size:12px; }
+}
+
+/* Simple academic entries: subject at left, dates at right, no card framing. */
+.education-list { --education-logo-size:79.2px; list-style:none; margin:0; padding:0; }
+.education-entry { display:grid; grid-template-columns:var(--education-logo-size) minmax(0,1fr) auto; gap:24px; align-items:center; padding:24px 0; }
+.education-entry + .education-entry { border-top:1px solid var(--line); }
+.education-entry__logo { width:var(--education-logo-size); height:var(--education-logo-size); display:grid; place-items:center; padding:4px; background:#fff; border-radius:8px; }
+.education-entry__logo img { width:100%; height:100%; object-fit:contain; filter:none; }
+.education-entry__body h3 { margin:0 0 6px; color:var(--ink); font-size:18px; line-height:1.5; }
+.education-entry__body p { margin:0; color:var(--ink-soft); font-size:18px; line-height:1.6; }
+.education-entry__body .education-entry__subject { color:var(--ink); font-weight:600; }
+.education-entry__dates { margin:0; text-align:right; color:var(--ink); font-size:16px; line-height:1.7; white-space:nowrap; }
+.education-entry__dates span { display:block; color:var(--ink-soft); }
+/* Blue variations, with the original palette retained for comparison. */
+:root[data-accent="muted-navy"] { --accent:#34547e; --accent-hover:#263f60; --person-link:#3c608f; --tint:#eef2f7; }
+:root[data-theme="dark"][data-accent="muted-navy"] { --accent:#afc4df; --accent-hover:var(--ink); --person-link:#afc4df; --tint:#29364a; }
+:root[data-accent="original-blue"] { --accent:#244c88; --accent-hover:#163766; --person-link:#285fba; --tint:#edf2f9; }
+:root[data-theme="dark"][data-accent="original-blue"] { --accent:#a9c7fa; --accent-hover:var(--ink); --person-link:#a9c7fa; --tint:#25334b; }
+:root[data-accent="slate-blue"] { --accent:#496582; --accent-hover:#344b64; --person-link:#496582; --tint:#eff3f6; }
+:root[data-theme="dark"][data-accent="slate-blue"] { --accent:#b8cbdc; --accent-hover:var(--ink); --person-link:#b8cbdc; --tint:#2b3744; }
+:root[data-accent="steel-blue"] { --accent:#426c83; --accent-hover:#2d5064; --person-link:#426c83; --tint:#edf3f6; }
+:root[data-theme="dark"][data-accent="steel-blue"] { --accent:#afcbd9; --accent-hover:var(--ink); --person-link:#afcbd9; --tint:#293a43; }
+:root[data-accent="denim"] { --accent:#365f87; --accent-hover:#264666; --person-link:#3c658e; --tint:#edf2f8; }
+:root[data-theme="dark"][data-accent="denim"] { --accent:#aec8e3; --accent-hover:var(--ink); --person-link:#aec8e3; --tint:#28364b; }
+:root[data-accent="midnight"] { --accent:#2d4262; --accent-hover:#1d2e47; --person-link:#3a5275; --tint:#eef1f6; }
+:root[data-theme="dark"][data-accent="midnight"] { --accent:#b3c2da; --accent-hover:var(--ink); --person-link:#b3c2da; --tint:#293244; }
+.theme-colour-dot { width:16px; height:16px; border-radius:50%; background:var(--accent); flex:none; }
+.appearance__panel fieldset { margin-bottom:12px; }
+.appearance__hint { margin:0; color:var(--ink-soft); font-size:13px; line-height:1.5; }
+.research-page .pub:is(:hover,:focus-within) .pub__venue :is(.conference-label,.pub__badge--muted),
+[data-theme="dark"] .research-page .pub:is(:hover,:focus-within) .pub__venue :is(.conference-label,.pub__badge--muted) {
+  color:var(--accent);
+  background:var(--tint);
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,var(--surface)),0 0 20px 5px color-mix(in srgb,var(--accent) 35%,transparent),0 0 34px 9px color-mix(in srgb,var(--accent) 16%,transparent);
+}
+@media screen and (max-width:760px) {
+  .education-list { --education-logo-size:56px; }
+  .education-entry { grid-template-columns:56px minmax(0,1fr); gap:8px 16px; padding:20px 0; }
+  .education-entry__logo { width:56px; height:56px; }
+  .education-entry__body h3,.education-entry__body p { font-size:16px; }
+  .education-entry__dates { grid-column:2; text-align:left; font-size:14px; white-space:normal; }
+  .education-entry__dates span { display:inline; margin-left:12px; }
+  .theme-colour-label { display:none; }
+  .appearance summary { width:40px; min-height:44px; padding:8px; }
+  .appearance__panel { position:fixed; top:76px; right:16px; width:300px; max-width:calc(100vw - 32px); }
+}
+@media screen and (max-width:430px) {
+  .nav__brand > span:last-child { max-width:84px; font-size:15px; line-height:1.15; }
+  .nav__right { gap:4px; }
+}
+@media screen and (min-width:761px) and (max-width:1100px) {
+  .education-list { --education-logo-size:72px; }
+}
+/* Both marks share one fixed canvas, so the crossfade never moves the text. */
+.education-logo-switch { position:relative; background:transparent; border:0; cursor:pointer; overflow:hidden; }
+.education-logo-switch img { position:absolute; inset:4px; width:calc(100% - 8px); height:calc(100% - 8px); transition:opacity 850ms ease; pointer-events:none; }
+.education-logo-switch__original { opacity:1; }
+.education-logo-switch__alternate { opacity:0; }
+.education-logo-switch:is([aria-pressed="true"]) .education-logo-switch__original { opacity:0; }
+.education-logo-switch:is([aria-pressed="true"]) .education-logo-switch__alternate { opacity:1; }
+.education-logo-switch:hover { box-shadow:none; background:transparent; }
+.appearance__panel { max-height:calc(100dvh - 100px); overflow-y:auto; }
+@media (prefers-reduced-motion:reduce) {
+  .education-logo-switch img { transition:none; }
+}
+
+/* Advisors retain the original blue, independently of the chosen theme accent. */
+:root { --advisor-blue:#3263a5; }
+:root[data-theme="dark"] { --advisor-blue:#bad4ff; }
+.hero__copy .prose a.bio-link--person,
+.hero__copy .prose a.bio-link--person:is(:hover,:focus-visible),
+.timeline__advisor a,
+.timeline__advisor a:is(:hover,:focus-visible) { color:var(--advisor-blue); }
+
+/* Degree-led text blocks, with the university marks placed to the right. */
+.education-list { display:grid; grid-template-columns:1fr; gap:0; }
+.education-entry { display:grid; grid-template-columns:minmax(0,1fr) var(--education-logo-size); grid-template-areas:'study logo' 'dates logo'; align-items:center; gap:12px 36px; padding:28px 0; }
+.education-entry + .education-entry { border-top:1px solid var(--line); }
+.education-entry__body { grid-area:study; min-width:0; }
+.education-entry__logo { grid-area:logo; justify-self:end; }
+.education-entry__body h3 { margin:0 0 6px; font-size:26px; line-height:1.3; font-weight:600; }
+.education-entry__body .education-entry__subject { color:var(--ink); font-size:18px; font-weight:400; }
+.education-entry__body .education-entry__school { margin-top:12px; color:var(--ink); font-size:17px; font-weight:600; }
+.education-entry__dates { grid-area:dates; margin:0; text-align:left; font-size:15px; white-space:normal; }
+.education-entry__dates span { display:inline; margin-left:14px; }
+@media screen and (max-width:760px) {
+  .education-entry { gap:10px 16px; padding:22px 0; }
+  .education-entry__body h3 { font-size:23px; }
+  .education-entry__body .education-entry__subject,.education-entry__body .education-entry__school { font-size:16px; }
+  .education-entry__dates { font-size:14px; }
+}

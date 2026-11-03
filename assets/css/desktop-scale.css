@@ -1,0 +1,79 @@
+/* Match the approved 90% desktop view without changing browser zoom or phone sizes. */
+@media screen and (min-width:1101px) {
+  :root { --max-width:1116px; }
+  html { font-size:90%; scroll-padding-top:79.2px; }
+  body { font-size:16.2px; }
+  .container { width:min(var(--max-width),calc(100% - clamp(28.8px,5vw,72px))); }
+
+  .nav__inner.container { width:100%; min-height:68.4px; padding-inline:clamp(14.4px,3vw,43.2px); }
+  .nav__brand { gap:9.9px; }
+  .nav__brand > span:last-child { font-size:19.8px; }
+  .nav__monogram { width:34.2px; height:34.2px; }
+  .nav__links { gap:21.6px; }
+  .nav__links a { font-size:14.4px; }
+
+  .hero { grid-template-columns:270px minmax(0,1fr); column-gap:32.4px; }
+  .hero__portrait { min-height:378px; }
+  :root .hero.hero--lake-fade {
+    --lake-content-space:clamp(64.8px,7vw,99px);
+    --lake-fade-depth:clamp(120px,12vw,170px);
+    min-height:calc(738px + var(--lake-fade-depth));
+    padding-inline:max(clamp(14.4px,2.5vw,36px),calc((100vw - var(--max-width)) / 2));
+    row-gap:25.2px;
+  }
+  :root[data-about-style="glass"] .hero__copy { padding:30.6px 34.2px 33.3px; border-radius:22.5px; }
+  .hero__copy .prose,:root[data-about-style="glass"] .hero__copy .prose { font-size:17.1px; }
+  .hero__copy .prose p + p { margin-top:18px; }
+  .hero__copy #name,:root[data-about-style="glass"] .hero__copy #name { font-size:clamp(44px,5vw,64px); margin-bottom:21.6px; }
+  .hero > .contacts { gap:10.8px; margin-top:12.6px; }
+  .hero > .contacts > * { font-size:13.5px; min-height:52.2px; padding:9px; gap:7.2px; border-radius:12.6px; }
+  .hero > .contacts svg { width:30.6px; height:30.6px; padding:5.4px; }
+
+  .news-section { padding-block:27px 30.6px; }
+  .news-list li { grid-template-columns:99px minmax(0,1fr); gap:21.6px; padding:18.9px 9px; }
+  .news-list p { font-size:17.1px; }
+  .news-list time,.section-note { font-size:13.5px; }
+  .news-new { font-size:13.5px; }
+  .news-doodle { width:32.4px; height:32.4px; margin-right:8.1px; }
+  #main > .section > .section-heading { padding-bottom:14.4px; margin-bottom:25.2px; gap:14.4px; }
+  #main > .section > .section-heading :is(h1,h2),#main > .recognition-section > h2 { font-size:36px; }
+  #main > .section > .section-heading :is(h1,h2) { gap:14.4px; }
+  #main > .section > .section-heading :is(h1,h2)::before { width:3.6px; height:25.2px; }
+  .experience-section,.education-section { padding-top:43.2px; }
+  #education .timeline { max-width:990px; }
+  :is(#experience,#education) .timeline { --timeline-text-size:18px; --timeline-logo-size:79.2px; }
+  #experience .timeline__item { gap:25.2px; padding-block:21.6px; }
+  #education .timeline__item { gap:27px; padding-bottom:30.6px; }
+  .current-badge { font-size:11.7px; padding:1.8px 7.2px; }
+  .recognition-section { padding-block:34.2px; }
+  .recognition-section h2 { margin-bottom:22.5px; }
+  .recognition-section h3 { font-size:18.9px; }
+  .recognition-section p { font-size:16.2px; }
+  #awards .awards li + li { margin-top:14.4px; }
+
+  .research-page .research-section { padding-top:43.2px; }
+  .research-masthead { margin-bottom:36px; }
+  .research-kicker { font-size:11.7px; margin-bottom:10.8px; }
+  .research-masthead h1 { font-size:clamp(46.8px,6vw,68.4px); }
+  #publications .research-masthead .author-legend { font-size:14.4px; margin-top:23.4px; gap:10.8px 25.2px; }
+  .research-contents { gap:7.2px 28.8px; margin-top:28.8px; padding-top:16.2px; }
+  .research-contents a { font-size:14.4px; }
+  .research-page .research-group > .research-subtitle,
+  .research-page #main > #service > .research-subtitle { font-size:24.3px; gap:14.4px; margin-bottom:23.4px; padding-bottom:14.4px; }
+  .research-section-count { font-size:12.6px; }
+  .research-page .research-group + .research-group { margin-top:64.8px; }
+  .research-page #service { padding:64.8px 0 50.4px; }
+  .pubs { gap:30.6px; }
+  .pub { padding:28.8px; gap:28.8px; }
+  .pub__media { max-width:990px; }
+  .pub__title { font-size:25.2px; margin-bottom:14.4px; }
+  .pub__name { font-size:30.6px; }
+  .pub__desc { font-size:17.1px; margin-bottom:16.2px; }
+  #publications .pub__authors { font-size:16.2px; margin-bottom:16.2px; }
+  .pub__venue { padding:12.6px 14.4px; gap:9px 14.4px; font-size:18.9px; margin-bottom:18px; }
+  .pub__venue .conference-name { font-size:18.9px; }
+  .pub__venue .oral-badge { font-size:14.4px; }
+  .pub__venue .pub__badge { font-size:18px; }
+  .pub__links a,.pub__links .resource-pending { font-size:14.4px; padding:8.1px 13.5px; }
+  .footer.container { padding:27px clamp(14.4px,3vw,43.2px); font-size:12.6px; }
+}
