@@ -1,6 +1,6 @@
 /* Retain the original full-figure layout with larger, clearer author names. */
 .research-page { --paper-detail-size:20px; }
-.research-page #publications .pub__authors { font-size:var(--paper-detail-size); line-height:1.6; }
+.research-page #publications .pub__authors { font-size:calc(var(--paper-detail-size) + 1px); line-height:1.6; }
 .research-page #publications .pub__authors .author-self { font-size:1em; font-weight:700; }
 .research-page .pub__desc { margin:0 0 22px; color:var(--ink-soft); font-size:18px; line-height:1.65; text-align:justify; text-align-last:left; text-wrap:wrap; hyphens:auto; }
 .research-page .pub__venue { display:grid; grid-template-columns:minmax(0,1fr); align-items:center; gap:10px 14px; margin-inline:-12px; width:calc(100% + 24px); font-size:var(--paper-detail-size); }

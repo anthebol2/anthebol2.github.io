@@ -32,7 +32,7 @@
 /* One readable text scale; author lines wrap rather than shrink to fit. */
 @media screen and (max-width:760px) {
   .research-page { --paper-detail-size:16px; }
-  .research-page #publications .pub__authors { font-size:16px; line-height:1.6; }
+  .research-page #publications .pub__authors { font-size:17px; line-height:1.6; }
   .research-page .pub__authors .author-row { display:flex; flex-wrap:wrap; justify-content:center; gap:5px 8px; font-size:inherit; }
   .research-page .pub__authors .author-row + .author-row { margin-top:5px; }
   .research-page .pub__authors .author-credit--cofirst { flex-direction:row; flex-wrap:wrap; justify-content:center; column-gap:4px; max-width:100%; }
