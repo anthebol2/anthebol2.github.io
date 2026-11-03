@@ -71,3 +71,26 @@
   .research-page .pub__venue .conference-name { padding:12px; }
   .research-page .pub__venue .oral-selection-row { padding:4px 0 0; }
 }
+
+/* Submission status shares the venue-band layout, with a warm neutral tint. */
+.research-page .pub__venue .pub__badge--muted {
+  display:block;
+  box-sizing:border-box;
+  width:100%;
+  padding:13px 16px;
+  border:0;
+  border-left:4px solid #8b7053;
+  border-radius:0 8px 8px 0;
+  background:#f3ede3;
+  color:#624f3b;
+  text-align:left;
+  box-shadow:none;
+}
+[data-theme="dark"] .research-page .pub__venue .pub__badge--muted {
+  background:#342f28;
+  border-left-color:#c2a781;
+  color:#e4d3b8;
+}
+@media screen and (max-width:760px) {
+  .research-page .pub__venue .pub__badge--muted { padding:12px; }
+}
