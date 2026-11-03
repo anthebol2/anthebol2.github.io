@@ -1,0 +1,25 @@
+/* Continuous author rows preserve legible text on narrow screens. */
+.research-page .pub__body { min-width:0; }
+.research-page .pub__title { text-align:left; }
+.research-page #publications .pub__authors {
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:center;
+  justify-content:flex-start;
+  gap:8px;
+  width:100%;
+  max-width:100%;
+  overflow-x:auto;
+  padding-block:4px 10px;
+  text-align:left;
+  scrollbar-width:thin;
+  scrollbar-color:var(--line) transparent;
+}
+.research-page #publications .pub__authors .author-row { display:contents; }
+.research-page #publications .pub__authors .author-credit {
+  flex:0 0 auto;
+  flex-wrap:nowrap;
+  justify-content:flex-start;
+  max-width:none;
+}
+.research-page #publications .pub__authors:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
