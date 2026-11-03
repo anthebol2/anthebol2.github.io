@@ -137,3 +137,5 @@
 .contact-choice__body p { margin:12px 0; font-size:15px; }
 .contact-hub__qr { display:block; width:100%; max-width:290px; height:auto; margin:auto; border-radius:8px; background:#fff; }
 .contact-hub__status:empty { display:none; }
+
+.contact-nav-arrow { display:inline-block; margin-left:3px; font-size:.72em; font-weight:400; opacity:.65; vertical-align:.08em; }
