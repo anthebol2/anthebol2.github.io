@@ -8,18 +8,25 @@
   letter-spacing:-.045em;
   color:var(--ink);
 }
-/* A short rule gives the name its own masthead without adding a subtitle. */
-.hero__copy #name::after {
-  content:"";
-  display:block;
-  width:64px;
-  height:2px;
-  margin-top:22px;
-  background:var(--ink);
-  opacity:.45;
+/* A softly offset nameplate separates the masthead from the biography. */
+.hero__copy #name,
+:root[data-about-style="glass"] .hero__copy #name {
+  position:relative;
+  isolation:isolate;
+  width:fit-content;
+  padding:10px 16px;
+  margin-left:-16px;
+  margin-bottom:28px;
 }
-@media screen and (max-width:760px) {
-  .hero__copy #name::after { width:48px; margin-top:18px; }
+.hero__copy #name::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  border-radius:18px 6px 18px 6px;
+  background:color-mix(in srgb,var(--accent) 9%,transparent);
+  transform:rotate(-1.5deg);
+  pointer-events:none;
 }
 .hero__copy .prose .hero__opening { color:var(--ink); font-weight:400; }
 /* Selection rates follow Oral directly, without a separate panel. */
@@ -39,7 +46,7 @@
 .news-list li:is(:hover,:focus-within) { background:transparent; }
 :root[data-theme="dark"] .nav__monogram { background:transparent; }
 @media screen and (max-width:760px) {
-  .hero__copy #name,:root[data-about-style="glass"] .hero__copy #name { font-size:clamp(32px,9vw,44px); margin-bottom:12px; }
+  .hero__copy #name,:root[data-about-style="glass"] .hero__copy #name { font-size:clamp(32px,9vw,44px); margin-bottom:24px; padding:8px 10px; margin-left:-10px; }
   .nav__monogram { display:grid; width:28px; height:28px; flex:none; }
   .nav__brand { gap:7px; }
 }

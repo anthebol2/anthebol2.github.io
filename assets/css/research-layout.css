@@ -6,7 +6,7 @@
 .research-page .pub__venue { display:grid; grid-template-columns:minmax(0,1fr); align-items:center; gap:10px 14px; margin-inline:-12px; width:calc(100% + 24px); font-size:var(--paper-detail-size); }
 .research-page .pub__venue .conference-name { min-width:0; }
 .research-page .pub__venue .oral-selection-row { grid-column:1/-1; font-size:calc(var(--paper-detail-size) - 2px); line-height:1.6; }
-.research-page .pub__venue .oral-selection-row .oral-badge { white-space:nowrap; margin-right:5px; }
+.research-page .pub__venue .oral-selection-row .oral-badge { white-space:nowrap; margin-right:7px; padding-inline:14px; }
 .research-page .pub__venue :is(.conference-name,.oral-badge,.pub__badge) { font-size:inherit; }
 .research-page .pub__venue .publication-selection { display:inline; color:#b42332; font-size:inherit; font-weight:700; line-height:1.6; }
 [data-theme="dark"] .research-page .pub__venue .publication-selection { color:#ff9ba5; }
