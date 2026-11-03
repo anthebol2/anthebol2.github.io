@@ -124,3 +124,7 @@
 :root[data-theme="light"] .research-page #publications .pub__authors .author-self {
   color:color-mix(in srgb,var(--person-link) 65%,var(--ink));
 }
+
+@media screen and (min-width:761px) {
+  .research-page #publications .pub__authors { font-size:calc(var(--paper-detail-size) + 2px); }
+}
