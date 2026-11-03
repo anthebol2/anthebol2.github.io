@@ -29,22 +29,22 @@
   .research-page .service-entry { font-size:16px; }
 }
 
+/* One readable text scale; author lines wrap rather than shrink to fit. */
 @media screen and (max-width:760px) {
-  .research-page #publications .pub__authors { font-size:14px; }
-  .research-page .pub__authors .author-row { gap:6px 12px; }
+  .research-page { --paper-detail-size:16px; }
+  .research-page #publications .pub__authors { font-size:16px; line-height:1.6; }
+  .research-page .pub__authors .author-row { display:flex; flex-wrap:wrap; justify-content:center; gap:5px 8px; font-size:inherit; }
+  .research-page .pub__authors .author-row + .author-row { margin-top:5px; }
+  .research-page .pub__authors .author-credit--cofirst { flex-direction:row; flex-wrap:wrap; justify-content:center; column-gap:4px; max-width:100%; }
+  .research-page .pub__authors .author-role-note { font-size:1em; }
   .research-page .pub__authors .author-marker { width:12px; height:18px; margin-left:1px; }
   .research-page .pub__authors .author-marker svg { width:12px; height:16px; }
-  .research-page .pub__authors .author-row:has(> .author-credit--cofirst) {
-    display:flex;
-    flex-wrap:nowrap;
-    gap:5px;
-    align-items:center;
-    font-size:clamp(10px,3.1vw,14px);
-  }
-  .research-page .pub__authors .author-row:has(> .author-credit--cofirst) > .author-credit { justify-content:center; }
-  .research-page .pub__authors .author-credit--cofirst { flex-direction:row; flex-wrap:nowrap; column-gap:3px; max-width:none; }
-  .research-page .pub__authors .author-role-note { font-size:.95em; }
-}
-@media screen and (max-width:360px) {
-  .research-page .pub__authors .author-row:has(> .author-credit--cofirst) { margin-inline:-10px; width:calc(100% + 20px); }
+  .research-page .pub__desc,
+  .research-page .pub__venue .oral-selection-row { text-align:left; text-align-last:auto; line-height:1.6; hyphens:none; }
+  .research-page .pub__title { font-size:21px; line-height:1.35; }
+  .research-page .pub__name { font-size:23px; }
+  .hero > .contacts > * { font-size:14px; }
+  .research-page .research-group > .research-subtitle,
+  .research-page #main > #service > .research-subtitle { font-size:26px; }
+  .nav .nav__links > a { font-size:18px; }
 }
