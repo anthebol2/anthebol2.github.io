@@ -146,12 +146,6 @@
 .theme-colour-dot { width:16px; height:16px; border-radius:50%; background:var(--accent); flex:none; }
 .appearance__panel fieldset { margin-bottom:12px; }
 .appearance__hint { margin:0; color:var(--ink-soft); font-size:13px; line-height:1.5; }
-.research-page .pub:is(:hover,:focus-within) .pub__venue .conference-label,
-[data-theme="dark"] .research-page .pub:is(:hover,:focus-within) .pub__venue .conference-label {
-  color:var(--accent);
-  background:var(--tint);
-  box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,var(--surface)),0 0 20px 5px color-mix(in srgb,var(--accent) 35%,transparent),0 0 34px 9px color-mix(in srgb,var(--accent) 16%,transparent);
-}
 @media screen and (max-width:760px) {
   .education-list { --education-logo-size:56px; }
   .education-entry { grid-template-columns:56px minmax(0,1fr); gap:8px 16px; padding:20px 0; }

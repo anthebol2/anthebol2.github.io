@@ -86,27 +86,8 @@
 }
 .research-page .pub__desc strong { color:var(--ink); font-weight:600; }
 
-/* Only the short venue label glows; the full conference name stays plain. */
+/* Conference labels stay plain; only Oral retains its hover glow. */
 .research-page .pub__venue .conference-label { display:inline-block; white-space:nowrap; }
-.research-page .pub__venue .conference-label {
-  border-radius:6px;
-  transition:color .18s,background-color .18s,box-shadow .18s,text-shadow .18s;
-}
-.research-page .pub:is(:hover,:focus-within) .pub__venue .conference-label {
-  color:#143762;
-  background-color:#dfebff;
-  box-shadow:0 0 0 4px #c3d9fc,0 0 20px 5px #5087cd70,0 0 34px 9px #4b7ebd33;
-  text-shadow:0 0 12px #ffffffa6;
-}
-[data-theme="dark"] .research-page .pub:is(:hover,:focus-within) .pub__venue .conference-label {
-  color:#f2f7ff;
-  background-color:#294c7a;
-  box-shadow:0 0 0 4px #416a9f,0 0 22px 5px #6da7f08c,0 0 38px 9px #6098e147;
-  text-shadow:0 0 12px #c3deff66;
-}
-@media(prefers-reduced-motion:reduce) {
-  .research-page .pub__venue .conference-label { transition:none; }
-}
 @media(max-width:760px) {
   .research-page .research-section { padding-top:30px; }
   .research-masthead {
