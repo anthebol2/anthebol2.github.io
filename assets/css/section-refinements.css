@@ -8,6 +8,19 @@
   letter-spacing:-.045em;
   color:var(--ink);
 }
+/* A short rule gives the name its own masthead without adding a subtitle. */
+.hero__copy #name::after {
+  content:"";
+  display:block;
+  width:64px;
+  height:2px;
+  margin-top:22px;
+  background:var(--ink);
+  opacity:.45;
+}
+@media screen and (max-width:760px) {
+  .hero__copy #name::after { width:48px; margin-top:18px; }
+}
 .hero__copy .prose .hero__opening { color:var(--ink); font-weight:400; }
 /* Selection rates follow Oral directly, without a separate panel. */
 .news-list .oral-rates,.pub__venue .oral-rates {
