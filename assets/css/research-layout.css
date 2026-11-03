@@ -94,3 +94,15 @@
 @media screen and (max-width:760px) {
   .research-page .pub__venue .pub__badge--muted { padding:12px; }
 }
+
+/* Slightly soften coauthors while retaining Anthony's existing emphasis. */
+.research-page .pub__authors .author-credit,
+.research-page .pub__authors .author-credit > a {
+  color:color-mix(in srgb,var(--ink) 76%,var(--surface));
+}
+.research-page .pub__authors .author-credit > a:is(:hover,:focus-visible) { color:var(--person-link); }
+.research-page .pub__venue .oral-selection-row {
+  text-align:justify;
+  text-align-last:left;
+  text-wrap:wrap;
+}
