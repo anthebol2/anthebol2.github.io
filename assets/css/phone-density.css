@@ -1,0 +1,30 @@
+/* A less enlarged phone view; desktop geometry and browser zoom stay unchanged. */
+@media screen and (max-width:760px) {
+  .container { width:calc(100% - 28px); }
+  :root .hero.hero--lake-fade { --lake-content-space:44px; row-gap:20px; padding-inline:14px; }
+  .hero__portrait { width:min(44vw,160px); min-height:195px; }
+  :root[data-about-style="glass"] .hero__copy { padding:20px 16px; }
+  .hero__copy #name,:root[data-about-style="glass"] .hero__copy #name { font-size:clamp(30px,8vw,38px); padding-bottom:17px; margin-bottom:18px; }
+  .hero__copy .prose,:root[data-about-style="glass"] .hero__copy .prose { font-size:16px; line-height:1.6; }
+  .hero__copy .prose p + p { margin-top:15px; }
+  .hero > .contacts { gap:7px; margin-top:8px; }
+  .hero > .contacts > * { min-height:44px; padding:7px; font-size:13px; }
+  .hero > .contacts svg { width:25px; height:25px; }
+  .news-list p { font-size:16px; line-height:1.6; }
+  #main > .section > .section-heading :is(h1,h2),#main > .recognition-section > h2 { font-size:28px; }
+  .research-section,.experience-section,.education-section { padding-top:30px; }
+  .education-entry__body h3 { font-size:21px; }
+  .education-entry__body .education-entry__degree { font-size:16px; }
+  .education-entry { padding-block:18px; }
+  .research-masthead h1 { font-size:44px; }
+  .research-masthead { margin-bottom:28px; }
+  .research-page .research-group > .research-subtitle,
+  .research-page #main > #service > .research-subtitle { font-size:25px; }
+  .research-page .pub { padding:13px; gap:16px; }
+  .research-page .pub__title { font-size:21px; }
+  .research-page .pub__name { font-size:24px; }
+  .research-page .pub__desc { font-size:16px; line-height:1.6; }
+  .research-page .research-group + .research-group { margin-top:48px; }
+  .research-page #service { padding-block:48px 36px; }
+  .research-page .service-entry { font-size:16px; }
+}
