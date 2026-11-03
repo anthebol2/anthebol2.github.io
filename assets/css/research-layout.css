@@ -49,3 +49,5 @@
 @media screen and (max-width:760px) {
   .research-page .service-entry { font-size:18px; }
 }
+
+.research-page .pub__venue .pub__badge--muted { width:fit-content; justify-self:center; }
