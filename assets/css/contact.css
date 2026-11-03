@@ -137,26 +137,3 @@
 .contact-choice__body p { margin:12px 0; font-size:15px; }
 .contact-hub__qr { display:block; width:100%; max-width:290px; height:auto; margin:auto; border-radius:8px; background:#fff; }
 .contact-hub__status:empty { display:none; }
-
-#contactHubOpen { display:inline-flex; align-items:center; gap:8px; }
-.contact-nav-arrow {
-  display:inline-grid;
-  place-items:center;
-  flex:none;
-  width:25px;
-  height:25px;
-  border:1px solid color-mix(in srgb,var(--accent) 35%,var(--line));
-  border-radius:9px 9px 9px 3px;
-  background:color-mix(in srgb,var(--accent) 10%,var(--surface));
-  color:var(--accent);
-  font:600 18px/1 var(--ui-font);
-  transition:transform .18s,background-color .18s;
-}
-#contactHubOpen:is(:hover,:focus-visible) .contact-nav-arrow {
-  transform:translate(2px,-2px);
-  background:color-mix(in srgb,var(--accent) 18%,var(--surface));
-}
-@media (prefers-reduced-motion:reduce) {
-  .contact-nav-arrow { transition:none; }
-  #contactHubOpen:is(:hover,:focus-visible) .contact-nav-arrow { transform:none; }
-}
