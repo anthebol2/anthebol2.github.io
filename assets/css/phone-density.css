@@ -28,3 +28,19 @@
   .research-page #service { padding-block:48px 36px; }
   .research-page .service-entry { font-size:16px; }
 }
+
+@media screen and (max-width:760px) {
+  .research-page #publications .pub__authors { font-size:14px; }
+  .research-page .pub__authors .author-row { gap:6px 12px; }
+  .research-page .pub__authors .author-marker { width:12px; height:18px; margin-left:1px; }
+  .research-page .pub__authors .author-marker svg { width:12px; height:16px; }
+  .research-page .pub__authors .author-row:has(> .author-credit--cofirst) {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+    align-items:start;
+  }
+  .research-page .pub__authors .author-row:has(> .author-credit--cofirst) > .author-credit { justify-content:center; }
+  .research-page .pub__authors .author-credit--cofirst { flex-direction:column; row-gap:2px; }
+  .research-page .pub__authors .author-role-note { font-size:12px; }
+}
