@@ -267,3 +267,14 @@
   .education-entry__body { gap:10px; }
   .education-entry__dates { font-size:16px; }
 }
+
+/* Shift the whole profile down without resizing or moving the lake backdrop. */
+@media screen {
+  :root .hero.hero--lake-fade {
+    --profile-offset:24px;
+    padding-block:calc(var(--lake-content-space) + var(--profile-offset)) calc(var(--lake-content-space) + var(--lake-fade-depth) - var(--profile-offset));
+  }
+}
+@media screen and (max-width:760px) {
+  :root .hero.hero--lake-fade { --profile-offset:16px; }
+}
