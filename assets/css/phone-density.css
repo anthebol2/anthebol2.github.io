@@ -2,7 +2,7 @@
 @media screen and (max-width:760px) {
   .container { width:calc(100% - 28px); }
   :root .hero.hero--lake-fade { --lake-content-space:44px; row-gap:20px; padding-inline:14px; }
-  .hero__portrait { width:min(44vw,160px); min-height:195px; }
+  .hero__portrait { width:min(56vw,205px); min-height:250px; }
   :root[data-about-style="glass"] .hero__copy { padding:20px 16px; }
   .hero__copy #name,:root[data-about-style="glass"] .hero__copy #name { font-size:clamp(30px,8vw,38px); padding-bottom:17px; margin-bottom:18px; }
   .hero__copy .prose,:root[data-about-style="glass"] .hero__copy .prose { font-size:16px; line-height:1.6; }

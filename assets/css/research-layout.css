@@ -120,3 +120,7 @@
 .research-page .pub__authors .author-credit--cofirst .author-role-note::after { content:","; font-weight:400; }
 
 .research-page .pub__venue .pub__badge--muted { font-size:var(--paper-detail-size); }
+
+:root[data-theme="light"] .research-page #publications .pub__authors .author-self {
+  color:color-mix(in srgb,var(--person-link) 65%,var(--ink));
+}
