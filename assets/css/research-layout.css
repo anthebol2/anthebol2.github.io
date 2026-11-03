@@ -50,4 +50,9 @@
   .research-page .service-entry { font-size:18px; }
 }
 
-.research-page .pub__venue .pub__badge--muted { width:fit-content; justify-self:center; }
+.research-page .pub__venue .pub__badge--muted { width:fit-content; justify-self:start; text-align:left; }
+
+#publications .research-masthead .author-legend { font-size:18px; }
+@media screen and (max-width:760px) {
+  #publications .research-masthead .author-legend { font-size:15px; }
+}
