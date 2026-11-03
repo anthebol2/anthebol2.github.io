@@ -117,4 +117,4 @@
 .research-page .pub__authors .author-row:last-child > .author-credit:last-child::after { content:none; }
 
 .research-page .pub__authors .author-credit--cofirst::after { content:none; }
-.research-page .pub__authors .author-credit--cofirst .author-role-note::after { content:","; }
+.research-page .pub__authors .author-credit--cofirst .author-role-note::after { content:","; font-weight:400; }
