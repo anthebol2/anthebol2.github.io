@@ -1,7 +1,46 @@
 (() => {
   'use strict';
 
+  const initialiseHub = () => {
+    const trigger = document.getElementById('contactHubOpen');
+    const dialog = document.getElementById('contactHub');
+    if (!trigger || !dialog || typeof dialog.showModal !== 'function') return;
+    trigger.addEventListener('click', (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      if (!dialog.open) dialog.showModal();
+      document.documentElement.classList.add('figure-open');
+    });
+    dialog.querySelector('[data-contact-close]').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => {
+      if (event.target !== dialog) return;
+      const bounds = dialog.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+    });
+    dialog.addEventListener('close', () => {
+      if (!document.querySelector('dialog[open]')) document.documentElement.classList.remove('figure-open');
+      const target = trigger.getClientRects().length ? trigger : document.getElementById('navToggle');
+      target?.focus({ preventScroll:true });
+    });
+    dialog.querySelectorAll('details').forEach((choice) => choice.addEventListener('toggle', () => {
+      if (choice.open) dialog.querySelectorAll('details').forEach((other) => { if (other !== choice) other.open = false; });
+    }));
+    const copy = document.getElementById('hubEmailCopy');
+    copy.addEventListener('click', async () => {
+      const address = document.getElementById('hubEmailAddress');
+      const status = document.getElementById('hubEmailStatus');
+      try {
+        await navigator.clipboard.writeText(address.value);
+        status.textContent = 'Copied! Ready for your hello.';
+      } catch (_) {
+        address.focus(); address.select(); address.setSelectionRange(0,address.value.length);
+        status.textContent = 'Select and copy the address above, or choose an email app.';
+      }
+    });
+  };
+
   const initialiseContact = () => {
+    initialiseHub();
     const trigger = document.getElementById('emailOpen');
     const dialog = document.getElementById('emailDialog');
     const address = document.getElementById('emailAddress');

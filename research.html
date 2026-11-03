@@ -43,6 +43,8 @@
   <link rel="stylesheet" href="assets/css/research-page.css?v=8" />
   <link rel="stylesheet" href="assets/css/desktop-scale.css?v=3" />
   <link rel="stylesheet" href="assets/css/mobile.css?v=1" />
+  <link rel="stylesheet" href="assets/css/contact.css?v=2" />
+  <script src="assets/js/contact.js?v=2" defer></script>
   <script src="assets/js/main.js?v=marks9" defer></script>
   <script src="assets/js/interactions.js?v=contacts5" defer></script>
   <script src="assets/js/photo-viewer.js?v=1" defer></script>
@@ -59,6 +61,7 @@
         <nav class="nav__links" id="primaryNav" aria-label="Primary navigation">
           <a href="./#about">About</a>
           <a href="research.html" class="is-active" aria-current="page">Research</a>
+          <a href="mailto:anthebol@outlook.com" id="contactHubOpen" aria-haspopup="dialog" aria-controls="contactHub">Contact me</a>
         </nav>
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
           <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 13.2A8.8 8.8 0 0 1 10.8 3.2 8.8 8.8 0 1 0 20.8 13.2Z"/></svg>
@@ -145,6 +148,33 @@
     <div class="figure-dialog__header"><h2 id="figureDialogTitle">Publication figure</h2><button type="button" class="figure-dialog__close" id="figureClose" aria-label="Close figure viewer" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
     <div class="figure-dialog__canvas"><img id="figureDialogImage" alt="" /></div>
     <div class="figure-dialog__footer"><div class="figure-dialog__navigation"><button type="button" id="figurePrevious" aria-label="Previous figure">←</button><span id="figureCounter" aria-live="polite">1 / 3</span><button type="button" id="figureNext" aria-label="Next figure">→</button></div><a id="figureOriginal" target="_blank" rel="noopener">Open original <span aria-hidden="true">↗</span></a></div>
+  </dialog>
+  <dialog class="email-dialog contact-hub" id="contactHub" aria-labelledby="contactHubTitle" aria-describedby="contactHubIntro">
+    <button class="email-dialog__close" type="button" data-contact-close aria-label="Close contact options">×</button>
+    <span class="contact-hub__wave" aria-hidden="true">👋</span>
+    <h2 class="email-dialog__title" id="contactHubTitle">Happy to connect!</h2>
+    <p class="email-dialog__intro" id="contactHubIntro">The best way to reach me is via email or WeChat. Pick whichever works for you.</p>
+    <details class="contact-choice">
+      <summary><span aria-hidden="true">✉</span><span>Email<small>Send a note</small></span><span class="contact-choice__arrow" aria-hidden="true">↗</span></summary>
+      <div class="contact-choice__body">
+        <input class="email-dialog__address" id="hubEmailAddress" value="anthebol@outlook.com" readonly aria-label="Anthony’s email address" />
+        <button class="email-dialog__copy" type="button" id="hubEmailCopy">Copy email address</button>
+        <div class="email-dialog__options">
+          <a href="mailto:anthebol@outlook.com">Open email app ↗</a>
+          <a href="https://outlook.live.com/mail/0/deeplink/compose?to=anthebol%40outlook.com" target="_blank" rel="noopener">Write in Outlook ↗</a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=anthebol%40outlook.com" target="_blank" rel="noopener">Write in Gmail ↗</a>
+        </div>
+        <p class="contact-hub__status" id="hubEmailStatus" role="status" aria-live="polite"></p>
+      </div>
+    </details>
+    <details class="contact-choice contact-choice--wechat">
+      <summary><span aria-hidden="true">💬</span><span>WeChat<small>Scan &amp; say hi</small></span><span class="contact-choice__arrow" aria-hidden="true">↗</span></summary>
+      <div class="contact-choice__body">
+        <img class="contact-hub__qr" src="assets/img/wechat-qr.jpg" width="888" height="1191" alt="Anthony’s WeChat QR code — scan to add as a friend" />
+        <p>On your phone? Save the QR code and open it in WeChat’s scanner.</p>
+        <a class="button" href="assets/img/wechat-qr.jpg" download="Anthony-WeChat.jpg">Save QR code ↓</a>
+      </div>
+    </details>
   </dialog>
   <footer class="footer container"><p>© <span id="year">2026</span> Anthony Bolton</p><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
 </body>

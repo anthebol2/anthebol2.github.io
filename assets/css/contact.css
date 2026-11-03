@@ -120,3 +120,20 @@
   .email-dialog { padding: 28px 20px 20px; }
   .email-dialog__title { font-size: 28px; }
 }
+
+/* Two friendly, direct contact choices, available from either main page. */
+.contact-hub__wave { display:block; margin-bottom:12px; font-size:34px; }
+.contact-choice { margin-top:12px; border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+.contact-choice summary { display:flex; align-items:center; gap:14px; padding:16px; cursor:pointer; list-style:none; color:var(--ink); font:600 20px/1.3 var(--ui-font); }
+.contact-choice summary::-webkit-details-marker { display:none; }
+.contact-choice summary > span:first-child { display:grid; place-items:center; width:42px; height:42px; border-radius:12px; background:var(--tint); color:var(--accent); font-size:26px; }
+.contact-choice--wechat summary > span:first-child { background:color-mix(in srgb,#4da06b 15%,var(--surface)); color:var(--ink); }
+.contact-choice summary small { display:block; margin-top:4px; font-size:14px; font-weight:400; color:var(--ink-soft); }
+.contact-choice__arrow { margin-left:auto; }
+.contact-choice summary:hover { background:color-mix(in srgb,var(--ink) 4%,transparent); }
+.contact-choice[open] .contact-choice__arrow { transform:rotate(90deg); }
+.contact-choice summary:focus-visible { outline:2px solid var(--accent); outline-offset:-3px; }
+.contact-choice__body { padding:0 16px 16px; }
+.contact-choice__body p { margin:12px 0; font-size:15px; }
+.contact-hub__qr { display:block; width:100%; max-width:290px; height:auto; margin:auto; border-radius:8px; background:#fff; }
+.contact-hub__status:empty { display:none; }
