@@ -111,3 +111,10 @@
 .research-page .pub__authors .author-credit--cofirst { flex-wrap:wrap; justify-content:center; column-gap:6px; max-width:100%; }
 .author-identity { display:inline-flex; align-items:center; white-space:nowrap; }
 .research-page .pub__authors .author-role-note { color:var(--ink); font:inherit; font-weight:700; text-decoration:none; background:none; white-space:nowrap; }
+
+/* Commas separate author credits, including across intentional row breaks. */
+.research-page .pub__authors .author-credit::after { content:","; color:inherit; }
+.research-page .pub__authors .author-row:last-child > .author-credit:last-child::after { content:none; }
+
+.research-page .pub__authors .author-credit--cofirst::after { content:none; }
+.research-page .pub__authors .author-credit--cofirst .author-role-note::after { content:","; }
