@@ -106,3 +106,8 @@
   text-align-last:left;
   text-wrap:wrap;
 }
+
+/* Explain Anthony's existing co-first stars without styling the note as a name. */
+.research-page .pub__authors .author-credit--cofirst { flex-wrap:wrap; justify-content:center; column-gap:6px; max-width:100%; }
+.author-identity { display:inline-flex; align-items:center; white-space:nowrap; }
+.research-page .pub__authors .author-role-note { color:var(--ink); font:inherit; font-weight:700; text-decoration:none; background:none; white-space:nowrap; }
