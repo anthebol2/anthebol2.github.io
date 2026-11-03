@@ -56,3 +56,18 @@
 @media screen and (max-width:760px) {
   #publications .research-masthead .author-legend { font-size:15px; }
 }
+
+/* The conference has its own heading band; Oral sits on the paper surface. */
+.research-page .pub__venue { padding:0; border:0; border-radius:0; background:transparent; }
+.research-page .pub__venue .conference-name {
+  display:block;
+  padding:13px 16px;
+  border-left:4px solid var(--ink-soft);
+  border-radius:0 8px 8px 0;
+  background:color-mix(in srgb,var(--tint) 60%,var(--surface));
+}
+.research-page .pub__venue .oral-selection-row { padding:4px 16px 0; }
+@media screen and (max-width:760px) {
+  .research-page .pub__venue .conference-name { padding:12px; }
+  .research-page .pub__venue .oral-selection-row { padding:4px 0 0; }
+}
