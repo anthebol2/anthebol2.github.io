@@ -131,3 +131,5 @@
 
 /* Emphasize only Anthony's co-first star. */
 .research-page .pub__authors .author-identity > .author-self + .author-marker svg { stroke-width:3; }
+
+.research-page .pub__authors .author-credit > .author-marker { color:inherit; }
