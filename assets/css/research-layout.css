@@ -133,3 +133,24 @@
 .research-page .pub__authors .author-identity > .author-self + .author-marker svg { stroke-width:3; }
 
 .research-page .pub__authors .author-credit > .author-marker { color:inherit; }
+
+/* Make available paper resources easy to spot and clearly interactive. */
+.research-page .pub__links a {
+  color:var(--accent-hover);
+  background:color-mix(in srgb,var(--accent) 10%,var(--surface));
+  border:1.5px solid color-mix(in srgb,var(--accent) 55%,var(--line));
+  font-size:16px;
+  font-weight:700;
+  min-height:46px;
+  padding:10px 16px;
+  box-shadow:0 2px 5px #1725300a;
+}
+.research-page .pub__links a svg { stroke-width:2; }
+.research-page .pub__links a:is(:hover,:focus-visible) {
+  color:var(--surface);
+  background:var(--accent);
+  border-color:var(--accent);
+  box-shadow:0 3px 10px #1725301a;
+  text-decoration:none;
+}
+.research-page .pub__links a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
