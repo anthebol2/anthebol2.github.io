@@ -278,3 +278,5 @@
 @media screen and (max-width:760px) {
   :root .hero.hero--lake-fade { --profile-offset:16px; }
 }
+
+.hero__copy .prose p { text-align:justify; text-align-last:left; text-wrap:wrap; }
